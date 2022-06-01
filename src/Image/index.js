@@ -1,0 +1,1 @@
+export {default as siteLogo} from "../Image/logo.png"
