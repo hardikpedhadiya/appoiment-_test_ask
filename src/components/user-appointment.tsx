@@ -7,7 +7,9 @@ const UserAppointment: React.FunctionComponent<IProps> = ({ }) => {
   const [capacity, setCapacity] = useState<number>(6);
   const diffrence = 15;
   const currentDate = new Date();
-  const [startDate, setStartDate] = useState<Date>(currentDate);
+  const nextDay = new Date();
+  nextDay.setDate(currentDate.getDate() + 1);
+  const [startDate, setStartDate] = useState<Date>(nextDay);
   const [startDateHour, setStartDateHour] = useState<Date>(new Date());
   const [startDateMinute, setStartDateMinute] = useState<Date>(new Date());
   const [endDateHour, setEndDateHour] = useState<Date>(
@@ -152,7 +154,7 @@ const UserAppointment: React.FunctionComponent<IProps> = ({ }) => {
                           showTimeSelect
                           showTimeSelectOnly
                           timeIntervals={60}
-                          filterTime={filterPassedTime}
+                          // filterTime={filterPassedTime}
                           timeCaption="Time"
                           timeFormat="HH:mm"
                           dateFormat="H"
@@ -172,7 +174,7 @@ const UserAppointment: React.FunctionComponent<IProps> = ({ }) => {
                               showTimeSelect
                               showTimeSelectOnly
                               timeIntervals={15}
-                              filterTime={filterPassedTime}
+                              // filterTime={filterPassedTime}
                               timeCaption="Time"
                               timeFormat="HH:mm"
                               dateFormat="mm"
@@ -205,7 +207,7 @@ const UserAppointment: React.FunctionComponent<IProps> = ({ }) => {
                           timeIntervals={60}
                           timeCaption="Time"
                           timeFormat="HH:mm"
-                          filterTime={filterPassedTime}
+                          // filterTime={filterPassedTime}
                           dateFormat="H"
                         />
                       </div>
@@ -224,7 +226,7 @@ const UserAppointment: React.FunctionComponent<IProps> = ({ }) => {
                           showTimeSelect
                           showTimeSelectOnly
                           timeIntervals={15}
-                          filterTime={filterPassedTime}
+                          // filterTime={filterPassedTime}
                           timeCaption="Time"
                           timeFormat="HH:mm"
                           dateFormat="mm"

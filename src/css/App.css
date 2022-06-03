@@ -1,3 +1,11 @@
-body{
+body {
     font-family: 'Poppins', sans-serif;
+}
+
+.chiron-mein {
+    overflow: hidden;
+}
+
+.container-fluid {
+    padding: 0px !important;
 }

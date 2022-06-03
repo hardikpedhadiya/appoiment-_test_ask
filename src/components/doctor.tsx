@@ -22,14 +22,14 @@ const Doctor: React.FunctionComponent<IProps> = (props) => {
       </div>
       <div className="table-search-wrap">
         <div className="row mb-3 mx-3">
-          <div className="col-8">
+          <div className="col-7">
             <input
               type="search"
               className="search w-100"
               placeholder="Search"
             />
           </div>
-          <div className="col-4">
+          <div className="col-5">
             <div className="d-flex table-date-wrap">
               <DatePicker
                 className="table-date"
